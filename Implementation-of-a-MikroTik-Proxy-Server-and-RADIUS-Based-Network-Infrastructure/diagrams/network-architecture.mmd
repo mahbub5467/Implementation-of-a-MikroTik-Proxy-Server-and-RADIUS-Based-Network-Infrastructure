@@ -1,8 +1,0 @@
-flowchart TD
- C[Wireless Clients] -->|WPA2-Enterprise / 802.1X| AP[UniFi UAP-AC-Pro]
- AP -->|RADIUS authentication / accounting| NPS[Windows Server NPS]
- NPS --- AD[Active Directory]
- AP -->|Wireless VLAN 20| MT[MikroTik RouterOS]
- LAN[Wired LAN] --> MT
- MT -->|Explicit proxy path as configured on client| CP[CCProxy 8.0]
- CP --> NET[Internet]
