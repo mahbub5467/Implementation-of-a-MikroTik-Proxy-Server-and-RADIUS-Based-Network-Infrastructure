@@ -1,0 +1,11 @@
+# Windows Server NPS / RADIUS
+- Install Network Policy and Access Services via Server Manager.
+- Verify AD domain and forest functional levels in ADUC.
+- Create domain users `user1`–`user4` and Security Group `wireless users`.
+- NPS RADIUS client: MikroTik, `10.10.10.253`; shared secret configured manually (never publish it).
+- Network Policy: `Secure Wireless Connections`, enabled, Allow access; ignore dial-in properties.
+- Conditions: NAS Port Type `Wireless – IEEE 802.11`; group `TEST\\wireless users`.
+- Configure Day and Time Restrictions (exact schedule not transcribed in report).
+- Enable PEAP with EAP-MSCHAPv2.
+- RADIUS VLAN attributes: Framed-Protocol=PPP; Service-Type=Framed; Tunnel-Medium-Type=802; Tunnel-Pvt-Group-ID=20; Tunnel-Type=VLAN.
+- Enable accounting to a local text file.
